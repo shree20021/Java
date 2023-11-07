@@ -1,0 +1,141 @@
+import java.util.*;
+ abstract class Shape
+{
+protected float side;
+protected double area;
+protected double perimeter;
+Shape()
+{
+side = 0;
+}
+Shape(float newSide)
+{
+side = newSide;
+}
+public abstract void calcaulateArea();
+public abstract void calcaulatePerimeter();
+public void display()
+{
+System.out.println("\nSide: "+side+"\nArea: "+area+"\nPerimeter: "+perimeter);
+}
+}
+class Triangle extends Shape
+{
+ Triangle()
+{
+super.side = 0;
+}
+Triangle(float newSide)
+{
+super.side = newSide;
+}
+public void calcaulateArea()
+{
+area = (side*side)*1/2;
+}
+public void calcaulatePerimeter()
+{
+perimeter = side+side+side;
+}
+}
+class Rectangle extends Shape{
+ Rectangle(){
+super.side = 0;
+}
+Rectangle(float newSide)
+{
+super.side = newSide;
+}
+public void calcaulateArea()
+{
+area = side*side;
+}
+public void calcaulatePerimeter()
+{
+perimeter = 2*(side*side);
+}
+}
+class Square extends Shape{
+Square(){
+super.side = 0;
+}
+Square(float newSide)
+{
+super.side = newSide;
+}
+public void calcaulateArea()
+{
+area = side*side;
+}
+public void calcaulatePerimeter()
+{
+perimeter = 4*side;
+}
+}
+class Cube extends Shape{
+ Cube(){
+super.side = 0;
+}
+Cube(float newSide)
+{
+super.side = newSide;
+}
+public void calcaulateArea()
+{
+area = 6*(side*side);
+}
+public void calcaulatePerimeter()
+{
+perimeter = 12*side;
+}
+}
+class Circle extends Shape{
+ Circle(){
+super.side = 0;
+}
+Circle(float newSide)
+{
+super.side = newSide;
+}
+public void calcaulateArea()
+{
+area = 3.14*(side*side);
+}
+public void calcaulatePerimeter()
+{
+perimeter = 2*3.14*side;
+}
+}
+class Shape1
+{
+public static void main(String arga[]){
+Shape s;
+s = new Triangle(10);
+System.out.println("\nTriangle");
+s.calcaulateArea();
+s.calcaulatePerimeter();
+s.display();
+System.out.println("\nRectangle");
+s = new Rectangle(10);
+s.calcaulateArea();
+s.calcaulatePerimeter();
+s.display();
+System.out.println("\nSquare");
+s = new Square(10);
+s.calcaulateArea();
+s.calcaulatePerimeter();
+s.display();
+
+System.out.println("\nCube");
+s = new Cube(10);
+s.calcaulateArea();
+s.calcaulatePerimeter();
+s.display();
+System.out.println("\nCircle");
+s = new Circle(10);
+s.calcaulateArea();
+s.calcaulatePerimeter();
+s.display();
+}
+}
+
